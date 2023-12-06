@@ -24,6 +24,13 @@
                     <div class="register">Already have an account?
                         <a href="{{ route('register') }}" id = "signup">Sign-up</a>
                     </div>
+                    @if ($errors->any())
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                    @endif
                 </form>
             </div>
         </div>

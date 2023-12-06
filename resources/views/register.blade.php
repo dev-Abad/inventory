@@ -9,22 +9,23 @@
                      @csrf
                     <h1>Register</h1>
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"><br>
+                        <input type="text" class="form-control" id="floatingInput" name="username" placeholder="name@example.com">
                         <label for="floatingInput">Enter Username</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password"><br>
+                        <input type="password" class="form-control" id="floatingPassword" name ="password" placeholder="Password">
                         <label for="floatingPassword">Enter Password</label>
                     </div>
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password"><br>
-                        <label for="floatingPassword">Confirm Password</label>
-                    </div>
                     <div class="mb-3">
-                    <a href="{{ route('login') }}">
                         <button type="submit">Register</button>
-                    </a>
                     </div>
+                    @if ($errors->any())
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                    @endif
                 </form>
             </div>
         </div>
