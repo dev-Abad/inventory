@@ -46,3 +46,7 @@ button{
     font-weight: 600;
 }
 
+.card .card-header{
+    background-color: #510400;
+    color: #fff;
+}

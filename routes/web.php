@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserManagerController;
+use App\Http\Controllers\costumeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,6 +32,18 @@ Route::get('/inventoryPage', function () {
     return view('inventory');
 });
 
+Route::get('/monitorPage', function () {
+    return view('cosMonitor');
+});
+
+Route::get('/createlist', function () {
+    return view('createList');
+});
+
+Route::get('/createmon', function () {
+    return view('createmon');
+});
+
 
 Route::get('/register', [UserManagerController::class, 'register'])->name('register');
 Route::post('/registration', [UserManagerController::class, 'registrationPost'])->name('registration.post');
@@ -39,3 +52,11 @@ Route::get('/login', [UserManagerController::class, 'login'])->name('login');
 Route::post('/loginpage', [UserManagerController::class, 'loginPost'])->name('login.post');
 
 Route::get('/inventoryPage', [UserManagerController::class, 'inventoryPage'])->name('inventoryPage');
+
+Route::get('/monitorPage', [costumeController::class, 'monitorPage'])->name('monitorPage');
+
+Route::get('/createlist', [costumeController::class, 'createlist'])->name('createlist');
+Route::post('/createlist', [costumeController::class, 'createlistPost'])->name('createlistPost');
+
+Route::get('/createmon', [costumeController::class, 'createmon'])->name('createmon');
+

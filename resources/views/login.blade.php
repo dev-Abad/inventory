@@ -1,5 +1,7 @@
 @extends('layout')
 
+@section('title','Login')
+
 @section('layout')
 <section>
     <div class="form-box">
