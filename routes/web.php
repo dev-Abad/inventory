@@ -44,6 +44,9 @@ Route::get('/createmon', function () {
     return view('createmon');
 });
 
+Route::get('/editRecord', function () {
+    return view('edit');
+});
 
 Route::get('/register', [UserManagerController::class, 'register'])->name('register');
 Route::post('/registration', [UserManagerController::class, 'registrationPost'])->name('registration.post');
@@ -52,11 +55,28 @@ Route::get('/login', [UserManagerController::class, 'login'])->name('login');
 Route::post('/loginpage', [UserManagerController::class, 'loginPost'])->name('login.post');
 
 Route::get('/inventoryPage', [UserManagerController::class, 'inventoryPage'])->name('inventoryPage');
+Route::get('/inventoryPage', [costumeController::class, 'inventorylistPage'])->name('inventoryPage');
+
 
 Route::get('/monitorPage', [costumeController::class, 'monitorPage'])->name('monitorPage');
+Route::get('/monitorPage', [costumeController::class, 'addMonPage'])->name('monitorPage');
 
 Route::get('/createlist', [costumeController::class, 'createlist'])->name('createlist');
 Route::post('/createlist', [costumeController::class, 'createlistPost'])->name('createlistPost');
 
 Route::get('/createmon', [costumeController::class, 'createmon'])->name('createmon');
+Route::post('/createmon', [costumeController::class, 'createmonPost'])->name('createmonPost');
+
+Route::get('/editRecord/{id}', [costumeController::class, 'editRecord'])->name('editRecord');
+Route::patch('/editRecord/{id}', [costumeController::class, 'editRecordPost'])->name('editRecordPost');
+
+Route::delete('/deleteRecord/{id}', [costumeController::class, 'destroy'])->name('deleteRecord');
+
+Route::get('/editList/{id}', [costumeController::class, 'editlistPage'])->name('editlistPage');
+Route::patch('/editList/{id}', [costumeController::class, 'editlistPost'])->name('editlistPost');
+
+Route::delete('/destroylist/{id}', [costumeController::class, 'destroylist'])->name('destroylist');
+
+
+
 

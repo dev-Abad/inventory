@@ -1,13 +1,13 @@
 @extends('homelayout')
 
-@section('title','Create List')
+@section('title','Add Record')
 
 @section('layout')
 <div class="card" style="margin:20px;">
   <div class="card-header">Add Costume Records</div>
   <div class="card-body">
        
-      <form action="{{}}" method="post">
+      <form action="{{ route('createmonPost') }}" method="post">
         {!! csrf_field() !!}
         <label>Event</label></br>
         <input type="text" name="event" id="event" class="form-control"></br>
@@ -22,9 +22,11 @@
         <label>Men/Women Attire</label></br>
         <select class="form-control" name="attire">
           <option value="select"></option>
-          <option value="men">Men Attire</option>
-          <option value="women">Women Attire</option>
+          <option value="Men's Attire">Men's Attire</option>
+          <option value="Women's Attire">Women's Attire</option>
         </select><br>
+        <label>Note</label></br>
+        <input type="text" name="note" id="note" class="form-control"></br>
         <input type="submit" value="Save" class="btn btn-success"></br>
     </form>
   </div>

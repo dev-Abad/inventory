@@ -5,18 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class recordModel extends Model
+class costumelist extends Model
 {
     use HasFactory;
 
-    protected $table = 'record_models';
+    protected $table = 'costumelist';
 
     protected $fillable = [
-        'event', 
-        'name', 
-        'borrow',
-        'return',
-        'costume',
-        'attire',
+        'qty', 
+        'costume', 
+        'attire'
     ];
 }

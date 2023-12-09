@@ -1,6 +1,6 @@
 @extends('homelayout')
 
-@section('title','Add Costume')
+@section('title','Costume List')
 
 @section('layout')
 <div class="container">
@@ -20,7 +20,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th>
+                                        <th>No.</th>
                                         <th>Quantity</th>
                                         <th>Costumes/ Accesories</th>
                                         <th>Men/ Women</th>
@@ -30,11 +30,25 @@
                                 <tbody>
                                 @foreach($costumes as $item)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $item->id }}</td>
                                         <td>{{ $item->qty }}</td>
                                         <td>{{ $item->costume }}</td>
                                         <td>{{ $item->attire }}</td>
-                                        </tr>
+                                        <td>
+                                        <a href="{{ route('editlistPage', ['id' => $item->id]) }}" title="Edit List">
+                                            <button class="btn btn-primary btn-sm">
+                                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
+                                            </button>
+                                        </a>
+                                        <form method="POST" action="{{ route('destroylist', ['id' => $item->id]) }}" accept-charset="UTF-8" style="display:inline">
+                                            @method('DELETE')
+                                            @csrf
+                                            <button type="submit" class="btn btn-danger btn-sm" title="Delete Record" onclick="return confirm('Confirm delete?')">
+                                                <i class="fa fa-trash-o" aria-hidden="true"></i> Delete
+                                            </button>
+                                        </form>
+                                        </td>
+                                    </tr>
                                 @endforeach
                                 </tbody>
                             </table>

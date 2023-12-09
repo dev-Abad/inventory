@@ -13,10 +13,10 @@
         <label>Costumes and Accessories</label></br>
         <input type="text" name="costume" id="costume" class="form-control"></br>
         <label>Men/Women Attire</label></br>
-        <select class="form-control">
-          <option value="select" name="attire"></option>
-          <option value="men">Men Attire</option>
-          <option value="women">Women Attire</option>
+        <select class="form-control" name="attire"> <!-- Added name attribute -->
+          <option value="select"></option>
+          <option value="Men's Attire">Men Attire</option>
+          <option value="Women's Attire">Women Attire</option>
         </select><br>
         <input type="submit" value="Save" class="btn btn-success"></br>
     </form>
