@@ -20,7 +20,6 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>No.</th>
                                         <th>Quantity</th>
                                         <th>Costumes/ Accesories</th>
                                         <th>Men/ Women</th>
@@ -30,7 +29,6 @@
                                 <tbody>
                                 @foreach($costumes as $item)
                                     <tr>
-                                        <td>{{ $item->id }}</td>
                                         <td>{{ $item->qty }}</td>
                                         <td>{{ $item->costume }}</td>
                                         <td>{{ $item->attire }}</td>
