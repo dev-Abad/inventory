@@ -28,6 +28,9 @@
                 </li>
             </ul>
             </div>
+            <a class="navbar-brand" href="{{route('logout')}}">Logout</a>
+            <button class="navbar-toggler active" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </div>
     </nav>
     </div>

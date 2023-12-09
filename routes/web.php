@@ -77,6 +77,7 @@ Route::patch('/editList/{id}', [costumeController::class, 'editlistPost'])->name
 
 Route::delete('/destroylist/{id}', [costumeController::class, 'destroylist'])->name('destroylist');
 
+Route::get('/logout', [costumeController::class, 'logout'])->name('logout');
 
 
 

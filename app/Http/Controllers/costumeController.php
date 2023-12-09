@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\userModel;
 use App\Models\costumelist;
@@ -94,5 +95,11 @@ class costumeController extends Controller
         $recordlist = costumelist::findOrFail($id);
         $recordlist->delete();
         return redirect()->route('inventoryPage')->with('flash_message', 'Record deleted!');
+    }
+
+    function logout(Request $request){
+        $request->session()->invalidate();
+        Auth::logout();
+        return redirect(route('login'));
     }
 }
