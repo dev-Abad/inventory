@@ -32,6 +32,10 @@ section{
 h1 {
     text-align: center;
 }
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
 
 button{
     width: 100%;
@@ -49,4 +53,15 @@ button{
 .card .card-header{
     background-color: #510400;
     color: #fff;
+}
+
+p {
+    color: #555;
+    line-height: 1.6;
+    text-align: center;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px; /* Adjust margin-top for image positioning */
 }

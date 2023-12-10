@@ -18,6 +18,10 @@ class UserManagerController extends Controller
         return view('login');
     }
 
+    function aboutPage(){
+        return view('about');
+    }
+
     public function inventoryPage(Request $request)
     {
         if (auth()->check()) {

@@ -57,6 +57,7 @@ Route::post('/loginpage', [UserManagerController::class, 'loginPost'])->name('lo
 Route::get('/inventoryPage', [UserManagerController::class, 'inventoryPage'])->name('inventoryPage');
 Route::get('/inventoryPage', [costumeController::class, 'inventorylistPage'])->name('inventoryPage');
 
+Route::get('/about', [UserManagerController::class, 'aboutPage'])->name('about');
 
 Route::get('/monitorPage', [costumeController::class, 'monitorPage'])->name('monitorPage');
 Route::get('/monitorPage', [costumeController::class, 'addMonPage'])->name('monitorPage');

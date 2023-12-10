@@ -19,10 +19,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="{{route('login')}}">Home</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">About MSEUF CS</a>
+                <a class="nav-link" href="{{route('about')}}">About MSEUF CS</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="#">Contacts</a>
